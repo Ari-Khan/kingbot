@@ -94,7 +94,7 @@ const safetySettings = [
 
 async function generateWithGeminiFlash(prompt) {
   const response = await googleGenAIClient.models.generateContent({
-    model: "gemini-2.5-flash-latest",
+    model: "gemini-3.0-flash-preview",
     contents: prompt,
     config: {
       temperature: 1.25,
@@ -107,7 +107,7 @@ async function generateWithGeminiFlash(prompt) {
 
 async function chatWithGeminiFlash(prompt, history = []) {
   const chat = googleGenAIClient.chats.create({
-    model: "gemini-flash-latest",
+    model: "gemini-3.0-flash-preview",
     temperature: 1.25,
     safetySettings: safetySettings,
     history,
